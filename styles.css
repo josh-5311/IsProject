@@ -1,0 +1,392 @@
+ /* register.html and login.html styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    background-image: url(img/back.png);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+}
+
+.container img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #1eb8d1;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    color: #7cb340;
+    font-weight: bold;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #1eb8d1;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #7cb340;
+}
+
+p {
+    margin-top: 15px;
+}
+
+a {
+    color: #1eb8d1;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+ /* End of registration.html and login.html styling */
+
+  /* admin_dashboard.html styling */
+  .admin-background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5); /* White overlay with transparency */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dashboard-container, .center-container, .requests-container, .reports-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-message {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.admin-operations {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.operation-container {
+    flex: 1 1 calc(50% - 20px);
+    margin: 10px;
+    padding: 20px;
+    background: #f7f7f7;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.operation-container .icon {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.operation-container h3 {
+    margin: 10px 0;
+}
+
+.operation-container a {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #7cb340;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.operation-container a:hover {
+    background: #1eb8d1;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 15px;
+    background: #7cb340;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.button:hover {
+    background: #1eb8d1;
+}
+
+.add-button {
+    background: #7cb340;
+}
+
+.add-button:hover {
+    background: #1eb8d1;
+}
+
+.edit-button {
+    background: #1eb8d1;
+}
+
+.edit-button:hover {
+    background: #7cb340;
+}
+
+.delete-button {
+    background: #e74c3c;
+}
+
+.delete-button:hover {
+    background: #c0392b;
+}
+
+.approve-button {
+    background: #2ecc71;
+}
+
+.approve-button:hover {
+    background: #27ae60;
+}
+
+.reject-button {
+    background: #e74c3c;
+}
+
+.reject-button:hover {
+    background: #c0392b;
+}
+ /* user dashboard stylings */
+ .user-dashboard-container, .user-operations {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.user-welcome-message {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.user-operations {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.user-operation-container {
+    flex: 1 1 calc(33.33% - 20px);
+    margin: 10px;
+    padding: 20px;
+    background: #f7f7f7;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.user-operation-container .icon {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.user-operation-container h3 {
+    margin: 10px 0;
+}
+
+.user-operation-container a {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #7cb340;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.user-operation-container a:hover {
+    background: #1eb8d1;
+}
+ /* request_pickup styling  */
+ /* User Profile Container */
+.user-profile-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-message {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-form-container {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.profile-form-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.profile-form-container label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.profile-form-container input[type="text"],
+.profile-form-container input[type="email"],
+.profile-form-container input[type="password"],
+.profile-form-container textarea {
+    width: calc(100% - 20px); /* Adjusted to give equal padding on both sides */
+    padding: 10px;
+    margin: 0 auto; /* Centering input fields */
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.profile-form-container textarea {
+    resize: vertical;
+}
+
+.profile-form-container input[type="submit"] {
+    width: fit-content;
+    margin: 20px auto 0; /* Centering the button and adding space on top */
+    padding: 10px 20px;
+    background: #7cb340;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.profile-form-container input[type="submit"]:hover {
+    background: #1eb8d1;
+}
+ /* rate_service styling */
+ /* Rate Service Container */
+.rate-service-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.rate-message {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.rate-form-container {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.rate-form-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.rate-form-container label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.rate-form-container select,
+.rate-form-container textarea {
+    width: calc(100% - 20px); /* Adjusted to give equal padding on both sides */
+    padding: 10px;
+    margin: 0 auto; /* Centering input fields */
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.rate-form-container textarea {
+    resize: vertical;
+}
+
+.rate-form-container input[type="submit"] {
+    width: fit-content;
+    margin: 20px auto 0; /* Centering the button and adding space on top */
+    padding: 10px 20px;
+    background: #7cb340;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.rate-form-container input[type="submit"]:hover {
+    background: #1eb8d1;
+}
