@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>GreenGear</title>
+    <link rel="favicon" href="#">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="centers">
+    <div class="center section" id="Center Locators">
+        <h2>E-waste Center Locators</h2>
+        <p>Welcome to Green Gear's Electronic Waste Recycling Centers! Discover convenient locations in Nairobi to responsibly recycle your old electronics and help keep our city green and clean.</p>
+    </div>
+     <!-- List of e-waste recycling centers -->
+    <table>
+         <!-- These are the table headings -->
+      <thead>
+         <!-- Table headings rows -->
+          <tr>
+
+            <th>Center Name</th>
+            <th>Address</th>
+            <th>Contact</th>
+            <th>Operating Hours</th>
+            <th>Description</th>
+            <th>Accepted E-Waste </th>
+          </tr>
+      </thead>
+      <tbody>
+        <?php
+        //an embedded language
+        //echo '<p>TEST</p>';
+
+        //1. Connect to the database
+        require_once 'db_config.php';
+        //2. Write a query to select all the professionals
+        $sql = "SELECT * FROM centers";
+        //3. Execute the query
+        $result = $conn->query($sql);
+        //4. Check if there are any results
+        if($result->num_rows > 0):
+            while($row = $result->fetch_assoc()){
+                //variables
+                    $center_name = $row['center_name'];
+                    $address = $row['address'];
+                    $contact = $row['contact'];
+                    $operating_hours = $row['operating_hours'];
+                    $description = $row['description'];
+                    $accepted_e-waste = $row['accepted_e-waste'];
+                    //print out the data
+                    echo '<tr>';
+                        echo "<td>$center_name</td>";
+                        echo "<td>$address</td>";
+                        echo "<td>$contact</td>";
+                        echo "<td>$operating_hours</td>";
+                        echo "<td>$description</td>";
+                        echo "<td>$accepted_e-waste</td>";
+                    //lastly close the row
+                    echo '</tr>';
+            }
+        else:
+            echo '<tr>';
+                echo '<td colspan="7">No Centers found</td>';
+            echo '</tr>';
+        endif;
+    ?>
+
+      <tr>  
+        <td><div class="waste-container"><img src="" alt=""></div></td>
+        <td>Kiambu Road Recycling Center</td>
+        <td> Kiambu Road, Opposite Ridgeways Mall, Nairobi</td>
+        <td>+254 700 123456</td>
+        <td>Monday - Saturday, 8:00 AM - 6:00 PM</td>
+        <td>A leading center for electronic waste management located conveniently on Kiambu Road. The center is known for its efficient recycling processes and friendly staff.</td>
+        <td>Computers, printers, scanners, mobile phones, and tablets.</td>
+      </tr>
+      <tr>
+        <td><div class="waste-container"><img src="" alt=""></div></td>
+        <td>Ngong Road Eco-Center</td>
+        <td>Ngong Road, Next to Junction Mall, Nairobi</td>
+        <td>+254 700 234567</td>
+        <td>Monday - Friday, 9:00 AM - 5:00 PM</td>
+        <td>Ngong Road Eco-Center specializes in the recycling of household and office electronic waste. It is easily accessible and provides comprehensive services.</td>
+        <td>Laptops, desktop computers, monitors, keyboards, and mice.</td>
+      </tr>
+      <tr>
+        <td><div class="waste-container"><img src="" alt=""></div></td>
+        <td>Kariobangi Waste Management Center</td>
+        <td> Kariobangi North, Nairobi</td>
+        <td>+254 700 345678</td>
+        <td>Monday - Saturday, 8:00 AM - 5:00 PM</td>
+        <td>This center is a community-based initiative focusing on sustainable electronic waste recycling, providing employment opportunities to local residents.</td>
+        <td>Televisions, radios, DVD players, home theater systems, and gaming consoles.</td>  
+      </tr>
+      <tr>
+        <td><div class="waste-container"><img src="" alt=""></div></td>
+        <td>Westlands Green Center</td>
+        <td>Westlands, Nairobi</td>
+        <td>+254 700 456789</td>
+        <td>Monday - Saturday, 9:00 AM - 6:00 PM</td>
+        <td>Westlands Green Center is dedicated to reducing electronic waste through effective recycling methods. They offer drop-off and pick-up services for larger items.</td>
+        <td>Air conditioners, refrigerators, microwaves, washing machines, and electric cookers.</td>
+      </tr>
+      <tr>
+        <td><div class="waste-container"><img src="" alt=""></div></td>
+        <td>Eastleigh Recycling Hub</td>
+        <td>Eastleigh, Nairobi</td>
+        <td>+254 700 567890</td>
+        <td>Monday - Saturday, 8:00 AM - 4:00 PM</td>
+        <td>A key recycling hub in Eastleigh, known for its active participation in promoting environmental sustainability by managing electronic waste efficiently.</td>
+        <td>Batteries, chargers, cables, power banks, and circuit boards.</td>
+      </tr>
+      <tr>
+        <td><div class="waste-container"><img src="" alt=""></div></td>
+        <td>Karen Environmental Center</td>
+        <td>Karen Road, Nairobi</td>
+        <td>+254 700 678901</td>
+        <td>Monday - Friday, 9:00 AM - 5:00 PM</td>
+        <td>Located in the serene environment of Karen, this center is ideal for residents looking to responsibly dispose of their electronic waste.</td>
+        <td>Mobile phones, tablets, smartwatches, headphones, and wearable electronics.</td>
+      </tr>
+      <tr>
+        <td><div class="waste-container"><img src="" alt=""></div></td>
+        <td>Ruaraka Waste Processing Center</td>
+        <td>Ruaraka, Nairobi</td>
+        <td>+254 700 789012</td>
+        <td>Monday - Saturday, 8:00 AM - 6:00 PM</td>
+        <td>Ruaraka Waste Processing Center is a state-of-the-art facility that focuses on the safe disposal and recycling of a wide range of electronic waste.</td>
+        <td>Office electronics, servers, routers, network switches, and UPS systems.</td>
+      </tr>    
+      </tbody>
+    </table>   
+</body>
