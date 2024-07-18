@@ -1,5 +1,9 @@
  /* register.html and login.html styling */
+<<<<<<< HEAD
 body.main {
+=======
+body {
+>>>>>>> 5f639c6bdd0ae8501e593ced01ca22f9d356f59a
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
     background-image: url(img/back.png);
@@ -268,6 +272,7 @@ th {
 .user-operation-container a:hover {
     background: #1eb8d1;
 }
+<<<<<<< HEAD
  /* Center Locators Styling */
  body.centers {
     font-family: Arial, sans-serif;
@@ -932,3 +937,127 @@ body.request-pickup-body {
 .form-request-pickup button:hover {
     background-color: #1eb8d1;
 }
+=======
+ /* request_pickup styling  */
+ /* User Profile Container */
+.user-profile-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-message {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-form-container {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.profile-form-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.profile-form-container label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.profile-form-container input[type="text"],
+.profile-form-container input[type="email"],
+.profile-form-container input[type="password"],
+.profile-form-container textarea {
+    width: calc(100% - 20px); /* Adjusted to give equal padding on both sides */
+    padding: 10px;
+    margin: 0 auto; /* Centering input fields */
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.profile-form-container textarea {
+    resize: vertical;
+}
+
+.profile-form-container input[type="submit"] {
+    width: fit-content;
+    margin: 20px auto 0; /* Centering the button and adding space on top */
+    padding: 10px 20px;
+    background: #7cb340;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.profile-form-container input[type="submit"]:hover {
+    background: #1eb8d1;
+}
+ /* rate_service styling */
+ /* Rate Service Container */
+.rate-service-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.rate-message {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.rate-form-container {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.rate-form-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.rate-form-container label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.rate-form-container select,
+.rate-form-container textarea {
+    width: calc(100% - 20px); /* Adjusted to give equal padding on both sides */
+    padding: 10px;
+    margin: 0 auto; /* Centering input fields */
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.rate-form-container textarea {
+    resize: vertical;
+}
+
+.rate-form-container input[type="submit"] {
+    width: fit-content;
+    margin: 20px auto 0; /* Centering the button and adding space on top */
+    padding: 10px 20px;
+    background: #7cb340;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.rate-form-container input[type="submit"]:hover {
+    background: #1eb8d1;
+}
+>>>>>>> 5f639c6bdd0ae8501e593ced01ca22f9d356f59a
