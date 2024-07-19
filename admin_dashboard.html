@@ -1,9 +1,13 @@
 <?php
 session_start();
-if (!isset($_SESSION['username']) || $_SESSION['role'] !== 'admin') {
+
+if (!isset($_SESSION['admin_name'])) {
+    // Redirect to login page if not logged in
     header("Location: login.php");
     exit();
 }
+
+$admin_name = $_SESSION['admin_name'];
 ?>
 
 <!DOCTYPE html>
@@ -14,45 +18,26 @@ if (!isset($_SESSION['username']) || $_SESSION['role'] !== 'admin') {
     <title>Admin Dashboard - Green Gear</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<<<<<<< HEAD
-<body class="main">
-    <div class="dashboard-container">
-        <div class="welcome-message">
-            
-=======
 <body>
     <div class="dashboard-container">
         <div class="welcome-message">
             <h1>Welcome, <?php echo htmlspecialchars($admin_name); ?>!</h1>
->>>>>>> 5f639c6bdd0ae8501e593ced01ca22f9d356f59a
         </div>
         <div class="admin-operations">
             <div class="operation-container">
                 <div class="icon">&#128736;</div>
                 <h3>Manage Centers</h3>
-<<<<<<< HEAD
-                <a href="manage_centers.php">Go to Manage Centers</a>
-=======
                 <a href="manage_centers.html">Go to Manage Centers</a>
->>>>>>> 5f639c6bdd0ae8501e593ced01ca22f9d356f59a
             </div>
             <div class="operation-container">
                 <div class="icon">&#128505;</div>
                 <h3>Approve Requests</h3>
-<<<<<<< HEAD
-                <a href="approve_requests.php">Go to Approve Requests</a>
-=======
                 <a href="approve_requests.html">Go to Approve Requests</a>
->>>>>>> 5f639c6bdd0ae8501e593ced01ca22f9d356f59a
             </div>
             <div class="operation-container">
                 <div class="icon">&#128200;</div>
                 <h3>Generate Reports</h3>
-<<<<<<< HEAD
-                <a href="generate_reports.php">Go to Generate Reports</a>
-=======
                 <a href="generate_reports.html">Go to Generate Reports</a>
->>>>>>> 5f639c6bdd0ae8501e593ced01ca22f9d356f59a
             </div>
             <div class="operation-container">
                 <div class="icon">&#128274;</div>
